@@ -1,0 +1,98 @@
+Aplicacion a probar: https://gbhqatest.firebaseapp.com/
+ID caso de prueba: IS_01
+Titulo de caso de prueba: Inicio de sesion
+Pre-Condiciones: 
+	1-Tener conexion a internet
+	2-Tener cuenta de gmail 
+Pasos:
+	1- Presionar boton 'Sign in with google'
+	2- Introducir correo gmail
+	3- presione el boton siguiente
+	4- Introducir contraseña gmail
+	5- presione el boton siguiente
+Postcondiciones:
+	1. se debe mostrar la pantalla principal de GBH QA Onboarding test
+	
+	---------------------------------------------------------------------------------------------------------------
+	Aplicacion a probar: https://gbhqatest.firebaseapp.com/
+ID caso de prueba: Ag_01
+Titulo de caso de prueba: Agregar nueva nota
+Pre-Condiciones: 
+	1- Haber ejecutado caso de prueba IS_01
+Pasos:
+	1-Click en el boton '+' (esquina inferior derecha).
+	2-Ingresar 'TITLE' 
+	3-Ingresar texto sobre la nota
+	4-Click boton 'DONE'
+Post-condiciones:
+	1.Se mostrara la pantalla principal con la nueva nota.
+	---------------------------------------------------------------------------------------------------------------
+Aplicacion a probar: https://gbhqatest.firebaseapp.com/
+ID caso de prueba: E_01
+Titulo de caso de prueba: Eliminar nota
+Pre-Condiciones: 
+	1- Haber ejecutado caso de prueba IS_01
+	2- Haber ejecutado caso de prueba Ag_01
+Pasos:
+	1-Click sobre la nota.
+	4-Click boton 'DELETE'
+Post-condiciones:
+	1.Se mostrara la pantalla principal sin la nota.	
+
+---------------------------------------------------------------------------------------------------------------	
+	Aplicacion a probar: https://gbhqatest.firebaseapp.com/
+ID caso de prueba: Ed_01
+Titulo de caso de prueba: Editar nota
+Pre-Condiciones: 
+	1- Haber ejecutado caso de prueba IS_01
+	Pasos:
+	1-Click sobre la nota.
+	2-Ingresar nueva informacion
+	3-Click boton 'DONE'
+Post-condiciones:
+	1.Se mostrara la pantalla principal con la nueva informacion en la nota.
+
+---------------------------------------------------------------------------------------------------------------	
+	Aplicacion a probar: https://gbhqatest.firebaseapp.com/
+ID caso de prueba: Cs_01
+Titulo de caso de prueba: Cerrar sesion
+Pre-Condiciones: 
+	1- Haber ejecutado caso de prueba IS_01
+Pasos:
+	1-Click sobre el candado abierto (parte superior derecha).
+	Post-condiciones:
+	1.Se cerrara la sesion de la aplicacion.
+-------------------------------------------------------------------------------------------------------------------
+
+Reporte de problemas encontrados
+
+-------------------------------------------------------------------------------------------------------------------
+Descripcion: Problemas para precionar boton 'DELETE' y 'DONE' despues de haber ingresado cierta cantidad de texto.
+Acciones: 
+-Ejecutar caso de prueba IS_01
+-Ejecutar caso de prueba Ag_01
+-Ingresar parrafos de textos hasta llenar la nota ('2864' caracteres)
+Comportamiento obtenido: No te permitira completar o eliminar la nota.
+Comportamiento esperado: Deberian aparecer los botones 'Delete' y 'Done'.
+
+-----------------------------------------------------------------------------------------------------------------
+Descripcion: Luego de haber Cerrado sesion te permite editar y/o eliminar la ultima nota que tienes abierta y guarda los cambios en la cuenta del usuario.
+Acciones: 
+-Ejecutar caso de prueba IS_01
+-Ejecutar caso de prueba Ag_01
+-Elegir una nota ya creada.
+-Ejecutar caso de prueba Cs_01
+Comportamiento obtenido: Deja la nota abierta y si ejecutamos algun cambio son guardados.
+Comportamiento esperado: Deberia cerrar las notas abiertas y enviar a pagina de inicio de sesion.
+-------------------------------------------------------------------------------------------------------------------
+Descripcion: Problemas para visualizar las notas despues de haber ingresado cierta cantidad de texto.
+Acciones: 
+-Ejecutar caso de prueba IS_01
+-Ejecutar caso de prueba Ag_01
+-Ingresar parrafos de textos mayor a 50 caracteres.
+-Presionar boton de "Done" para terminar y guardar los cambios en la nota.
+Comportamiento obtenido: El texto de la nota no se alinea, impidiendo ver otras notas y creando dificultad para manejarlas.
+Comportamiento esperado: Deberian alinearse el texto de la nota para permitir visualizacion completa de las notas creadas.
+
+
+
